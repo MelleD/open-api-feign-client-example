@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2022 Robert Bosch Manufacturing Solutions GmbH, Germany. All rights reserved.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <parent>
+      <groupId>com.example</groupId>
+      <artifactId>open-api-feign-client-example</artifactId>
+      <version>DEV-SNAPSHOT</version>
+   </parent>
+   <modelVersion>4.0.0</modelVersion>
+
+   <artifactId>client-generator</artifactId>
+   <packaging>pom</packaging>
+
+
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.openapitools</groupId>
+            <artifactId>openapi-generator-maven-plugin</artifactId>
+            <executions>
+               <execution>
+                  <id>generate-client1</id>
+                  <goals>
+                     <goal>generate</goal>
+                  </goals>
+                  <configuration>
+                     <inputSpec>${project.basedir}/src/main/resources/api1.yaml</inputSpec>
+                     <output>${project.basedir}/../client</output>
+                     <generatorName>spring</generatorName>
+                     <configOptions>
+                        <modelPackage>test.client1.dto</modelPackage>
+                        <apiPackage>test.client1.api</apiPackage>
+                        <configPackage>test.client1.config</configPackage>
+                        <sourceFolder>src-gen/main/java</sourceFolder>
+                        <library>spring-cloud</library>
+                        <dateLibrary>java8</dateLibrary>
+                        <useSpringBoot3>true</useSpringBoot3>
+                        <useOptional>true</useOptional>
+                        <useSwaggerUI>false</useSwaggerUI>
+                        <documentationProvider>none</documentationProvider>
+                     </configOptions>
+                  </configuration>
+               </execution>
+               <execution>
+                  <id>generate-client2</id>
+                  <goals>
+                     <goal>generate</goal>
+                  </goals>
+                  <configuration>
+                     <inputSpec>${project.basedir}/src/main/resources/api2.yaml</inputSpec>
+                     <output>${project.basedir}/../client</output>
+                     <generatorName>spring</generatorName>
+                     <configOptions>
+                        <modelPackage>test.client2.dto</modelPackage>
+                        <apiPackage>test.client2.api</apiPackage>
+                        <configPackage>test.client2.config</configPackage>
+                        <sourceFolder>src-gen/main/java</sourceFolder>
+                        <library>spring-cloud</library>
+                        <dateLibrary>java8</dateLibrary>
+                        <useSpringBoot3>true</useSpringBoot3>
+                        <useOptional>true</useOptional>
+                        <useSwaggerUI>false</useSwaggerUI>
+                        <documentationProvider>none</documentationProvider>
+                     </configOptions>
+                  </configuration>
+               </execution>
+            </executions>
+         </plugin>
+      </plugins>
+   </build>
+</project>

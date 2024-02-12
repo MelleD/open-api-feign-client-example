@@ -1,0 +1,18 @@
+---
+openapi: 3.0.3
+info:
+  version: "v1"
+  title: Parent
+paths:
+components:
+  securitySchemes:
+    test:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: 'https:/token'
+          scopes:
+            'test': |
+              Client ID d
+
+

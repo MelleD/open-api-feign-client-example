@@ -1,0 +1,14 @@
+test/client1/config/ClientPropertiesConfiguration.class
+test/client2/api/Users2ApiClient.class
+test/client1/api/Users1ApiClient.class
+test/client1/config/ApiKeyRequestInterceptor.class
+test/client2/config/ApiKeyRequestInterceptor.class
+test/client1/dto/Users1PostRequest.class
+test/client2/dto/Users2PostRequest.class
+test/client1/config/ClientConfiguration.class
+test/client2/config/ClientConfiguration.class
+test/client1/config/ClientConfiguration$OAuth2RequestInterceptor.class
+test/client1/api/Users1Api.class
+test/client2/api/Users2Api.class
+test/client2/config/ClientPropertiesConfiguration.class
+test/client2/config/ClientConfiguration$OAuth2RequestInterceptor.class
